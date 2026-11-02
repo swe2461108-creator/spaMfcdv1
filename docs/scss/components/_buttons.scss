@@ -1,0 +1,40 @@
+
+@use "sass:color";
+
+// Button colors
+$primaryColor: #2bac73;
+$primaryColorDark: color.scale($primaryColor, $lightness: -15%);
+
+$secondaryColor: #ff914d;
+$secondaryColorDark: color.scale($secondaryColor, $lightness: -15%);
+
+// Override Bulma button
+:root {
+  --bulma-primary-h: 151deg;
+  --bulma-primary-s: 65%;
+  --bulma-primary-l: 42%;
+}
+
+.button.is-primary {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  color: white;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $primaryColorDark;
+    border-color: $primaryColorDark;
+  }
+}
+
+.button.is-secondary {
+  background-color: $secondaryColor;
+  border-color: $secondaryColor;
+  color: white;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $secondaryColorDark;
+    border-color: $secondaryColorDark;
+  }
+}
